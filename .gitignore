@@ -34,9 +34,7 @@ poetry.lock
 *~
 
 # Reports
-*_report_*.txt
-payslip_*.txt
-employee_list_*.txt
+reports/*.txt
 
 # OS
 .DS_Store
