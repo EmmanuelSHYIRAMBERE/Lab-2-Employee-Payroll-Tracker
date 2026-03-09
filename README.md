@@ -32,8 +32,8 @@ A comprehensive console-based payroll management system for computing pay slips 
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd employee-payroll-tracker
+git clone https://github.com/EmmanuelSHYIRAMBERE/Lab-2-Employee-Payroll-Tracker.git
+cd Lab-2-Employee-Payroll-Tracker
 ```
 
 ### 2. Install Dependencies with Poetry
