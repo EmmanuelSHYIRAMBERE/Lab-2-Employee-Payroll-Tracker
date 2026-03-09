@@ -3,6 +3,7 @@
 Menu handlers and CLI interface.
 """
 
+import os
 from colorama import Fore
 from datetime import datetime
 from src.models.employee import FullTimeEmployee, ContractEmployee, InternEmployee
@@ -410,7 +411,8 @@ class MenuHandlers:
         save = get_user_input("\nSave report to file? (y/n): ",
                             lambda x: x.lower() in ['y', 'n'])
         if save.lower() == 'y':
-            filename = f"employee_list_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            os.makedirs('reports', exist_ok=True)
+            filename = f"reports/employee_list_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
             with open(filename, 'w') as f:
                 f.write(report.generate())
             print(Fore.GREEN + f"✅ Report saved to {filename}")
@@ -423,7 +425,8 @@ class MenuHandlers:
         save = get_user_input("\nSave report to file? (y/n): ",
                             lambda x: x.lower() in ['y', 'n'])
         if save.lower() == 'y':
-            filename = f"payslip_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            os.makedirs('reports', exist_ok=True)
+            filename = f"reports/payslip_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
             with open(filename, 'w') as f:
                 f.write(report.generate())
             print(Fore.GREEN + f"✅ Report saved to {filename}")
