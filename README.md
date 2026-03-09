@@ -32,8 +32,8 @@ A comprehensive console-based payroll management system for computing pay slips 
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd employee-payroll-tracker
+git clone https://github.com/EmmanuelSHYIRAMBERE/Lab-2-Employee-Payroll-Tracker.git
+cd Lab-2-Employee-Payroll-Tracker
 ```
 
 ### 2. Install Dependencies with Poetry
@@ -81,6 +81,7 @@ poetry run python main.py
 ## Example Output
 
 ### Main Menu
+
 ```
 ============================================================
 Employee Payroll Tracker System
@@ -96,6 +97,7 @@ Enter your choice:
 ```
 
 ### Payslip Report
+
 ```
 ============================================================
                     PAYSLIP REPORT
@@ -119,20 +121,21 @@ Summary:
 ```
 
 ### System Statistics
-```
-📊 SYSTEM STATISTICS
-==================================================
-👥 Total Employees: 6
-💰 Total Payroll: $45,234.50
-📊 Average Salary: $7,539.08
 
-👤 Employee Type Breakdown:
+```
+SYSTEM STATISTICS
+==================================================
+Total Employees: 6
+Total Payroll: $45,234.50
+Average Salary: $7,539.08
+
+Employee Type Breakdown:
   • Full-Time Employee: 2 (33.3%)
   • Contract Employee: 2 (33.3%)
   • Intern: 2 (33.3%)
 
-💎 Highest Paid: Jane Smith - $11,160.00
-💵 Lowest Paid: Diana Prince - $1,710.00
+Highest Paid: Jane Smith - $11,160.00
+Lowest Paid: Diana Prince - $1,710.00
 ```
 
 ## Project Structure
@@ -175,11 +178,13 @@ Employee (ABC)
 ## Key Features
 
 ### 1. Inheritance & Polymorphism
+
 - Base `Employee` class with abstract methods
 - Subclasses override `calculate_gross_pay()` with role-specific logic
 - Polymorphic report generation
 
 ### 2. Property Decorators
+
 ```python
 @property
 def bonus(self) -> float:
@@ -195,11 +200,13 @@ def bonus(self, value: float):
 ```
 
 ### 3. Modular Functions
+
 - `calculate_total_payroll()` - Aggregate payroll calculations
 - `get_payroll_summary()` - Generate statistics
 - `find_highest_paid()` / `find_lowest_paid()` - Analytics
 
 ### 4. Data Validation
+
 - Email format validation
 - Salary range validation
 - Tax rate bounds checking
@@ -210,20 +217,24 @@ def bonus(self, value: float):
 The application comes pre-loaded with sample employees:
 
 **Full-Time Employees:**
+
 - John Doe (FT001) - $60,000/year + $5,000 bonus
 - Jane Smith (FT002) - $75,000/year + $7,500 bonus
 
 **Contract Employees:**
+
 - Bob Johnson (CT001) - $50/hour, 160 hours
 - Alice Williams (CT002) - $45/hour, 180 hours
 
 **Interns:**
+
 - Charlie Brown (IN001) - $2,000/month (MIT)
 - Diana Prince (IN002) - $1,800/month (Stanford)
 
 ## Salary Calculation Logic
 
 ### Full-Time Employee
+
 ```
 Monthly Gross = (Annual Salary / 12) + Benefits + Bonus
 Tax = Gross * 20%
@@ -231,6 +242,7 @@ Net Pay = Gross - Tax
 ```
 
 ### Contract Employee
+
 ```
 Regular Pay = Hours (up to 160) * Hourly Rate
 Overtime Pay = Overtime Hours * Hourly Rate * 1.5
@@ -240,6 +252,7 @@ Net Pay = Gross - Tax
 ```
 
 ### Intern
+
 ```
 Gross = Monthly Stipend + Bonus
 Tax = Gross * 5%
@@ -248,14 +261,15 @@ Net Pay = Gross - Tax
 
 ## Development Milestones
 
-- ✅ **Day 1**: Environment setup, data structures
-- ✅ **Day 2**: Functions and salary calculations
-- ✅ **Day 3**: OOP structure with inheritance and properties
-- ✅ **Day 4**: Packaging, testing, debugging
+- **Day 1**: Environment setup, data structures
+- **Day 2**: Functions and salary calculations
+- **Day 3**: OOP structure with inheritance and properties
+- **Day 4**: Packaging, testing, debugging
 
 ## Testing
 
 Run unit tests:
+
 ```bash
 poetry run python -m pytest tests/
 ```
@@ -263,6 +277,7 @@ poetry run python -m pytest tests/
 ## Error Handling
 
 The application includes comprehensive error handling:
+
 - Input validation for all user entries
 - Email format validation
 - Salary and bonus validation
@@ -279,23 +294,26 @@ The application includes comprehensive error handling:
 ## Troubleshooting
 
 **Issue**: `ModuleNotFoundError: No module named 'colorama'`
+
 - **Solution**: Install dependencies using `poetry install`
 
 **Issue**: Application crashes on startup
+
 - **Solution**: Ensure Python 3.10+ is installed: `python --version`
 
 ## Grading Criteria Alignment
 
-- ✅ **Language Fundamentals (20pts)**: Data types, control structures, comprehensions
-- ✅ **Functions & Modularity (15pts)**: Reusable functions in salary_calculator.py
-- ✅ **OOP Design Quality (25pts)**: Class hierarchy, encapsulation, inheritance
-- ✅ **Code Clarity & Style (15pts)**: PEP 8 adherence, proper naming
-- ✅ **Documentation & Comments (10pts)**: Docstrings and inline comments
-- ✅ **Execution & Output Quality (15pts)**: Complete functionality, stable CLI
+- **Language Fundamentals (20pts)**: Data types, control structures, comprehensions
+- **Functions & Modularity (15pts)**: Reusable functions in salary_calculator.py
+- **OOP Design Quality (25pts)**: Class hierarchy, encapsulation, inheritance
+- **Code Clarity & Style (15pts)**: PEP 8 adherence, proper naming
+- **Documentation & Comments (10pts)**: Docstrings and inline comments
+- **Execution & Output Quality (15pts)**: Complete functionality, stable CLI
 
 ## Contributing
 
 Contributions are welcome! Please ensure:
+
 - Code follows PEP 8 style guidelines
 - Type hints are included
 - Docstrings are comprehensive
@@ -308,5 +326,6 @@ This project is available for educational purposes.
 ## Author
 
 EmmanuelSHYIRAMBERE (emashyirambere1@gmail.com)
-#   L a b - 2 - E m p l o y e e - P a y r o l l - T r a c k e r  
+#   L a b - 2 - E m p l o y e e - P a y r o l l - T r a c k e r 
+ 
  
